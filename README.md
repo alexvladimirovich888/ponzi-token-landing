@@ -94,7 +94,7 @@ const TOKEN_ADDRESS = 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v';
 const TOKEN_ADDRESS = 'JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN';
 
 // Или любой токен с pump.fun:
-const TOKEN_ADDRESS = '2gyjpVxkFxpmvqXKMuASzmcPi666drM3ebWp8hNApump';
+const TOKEN_ADDRESS = 'CD9UePFoPkuDdh12gwpq5UocY6tPcW3av3jpsk8Dpump';
 ```
 
 ## 🔥 Ключевые особенности API интеграции
