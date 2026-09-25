@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PONZI TOKEN - Number Go Up! Diamond Hands Go Brrr!</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
+    
+    <!-- BOOTSTRAP 5 - RESPONSIVE OUT OF THE BOX -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Effects Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="crt-effect">
+        <div class="container-fluid"> <!-- BOOTSTRAP RESPONSIVE CONTAINER -->
+            <!-- Header Section -->
+            <div class="row">
+                <div class="col-12">
+                    <header class="header" data-aos="fade-down" data-aos-duration="1000">
+                        <div class="terminal-line">
+                            <span class="prompt">root@ponzi:~$</span>
+                            <span class="command typing">./number_go_up.exe --diamond-hands</span>
+                        </div>
+                        <h1 class="title animate__animated animate__pulse">PONZI TOKEN</h1>
+                        <p class="slogan">[NUMBER GO UP! DIAMOND HANDS GO BRRR! 💎🚀]</p>
+                    </header>
+                </div>
+            </div>
+
+            <!-- Main Content - Bootstrap Grid -->
+            <div class="row g-3">
+                <!-- Left Column - Token Stats -->
+                <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                    <div class="side-block">
+                        <h2 class="side-title">[TOKEN DATA]</h2>
+                        <div class="token-stats-narrow">
+                            <div class="stat-list">
+                                <div class="stat-item">
+                                    <span class="stat-label">💰 PRICE_USD:</span>
+                                    <span class="stat-value" id="token-price">$0.000</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">📊 MARKET_CAP:</span>
+                                    <span class="stat-value" id="market-cap">$0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">📈 VOLUME_24H:</span>
+                                    <span class="stat-value" id="volume">$0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">👥 DIAMOND_HOLDERS:</span>
+                                    <span class="stat-value" id="holders">0</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contract-address">
+                                <span class="stat-label">🔐 CONTRACT_ADDRESS:</span>
+                                <div class="address-container">
+                                    <span class="address-text" id="contract-address">ErTuAgyNFjdLSQkkdmTTUKpZNaiiRXmtE6ifHdZCpump</span>
+                                    <button class="copy-btn" onclick="copyAddress()" title="Copy Address">
+                                        <span class="copy-text">[COPY]</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <button class="buy-btn" onclick="buyToken()">
+                                🚀 BUY LAMBO TICKETS 🏎️
+                            </button>
+                            
+                            <!-- Additional Stats -->
+                            <div class="additional-stats">
+                                <div class="stat-row">
+                                    <span class="mini-label">⚡ LIQUIDITY:</span>
+                                    <span class="mini-value">$42.7K</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="mini-label">🔥 24H CHANGE:</span>
+                                    <span class="mini-value change-positive">+1337%</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="mini-label">💎 TOTAL SUPPLY:</span>
+                                    <span class="mini-value">1B PONZI</span>
+                                </div>
+                                <div class="stat-row">
+                                    <span class="mini-label">🚀 ATH:</span>
+                                    <span class="mini-value">$0.000420</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Links -->
+                            <div class="social-links">
+                                <h3 class="social-title">[SOCIAL LINKS]</h3>
+                                <div class="social-buttons">
+                                    <button class="social-btn" onclick="window.open('#', '_blank')">
+                                        📱 TELEGRAM
+                                    </button>
+                                    <button class="social-btn" onclick="window.open('#', '_blank')">
+                                        🐦 TWITTER
+                                    </button>
+                                    <button class="social-btn" onclick="window.open('https://pump.fun', '_blank')">
+                                        🔥 PUMP.FUN
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Quick Actions -->
+                            <div class="quick-actions">
+                                <h3 class="actions-title">[QUICK ACTIONS]</h3>
+                                <button class="action-btn" onclick="window.open('https://dexscreener.com', '_blank')">
+                                    📊 CHART
+                                </button>
+                                <button class="action-btn" onclick="copyAddress()">
+                                    📋 COPY CA
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Column - Content -->
+                <div class="col-xl-6 col-lg-8 col-md-12 col-12">
+                    <!-- Web3 Wallet Interface -->
+                    <section class="wallet-interface-section">
+                        <div class="wallet-interface">
+                            <!-- Wallet Connection (показывается когда не подключен) -->
+                            <div class="wallet-connect" id="wallet-connect">
+                                <h2 class="wallet-title">[PHANTOM_WALLET.connect] 👻</h2>
+                                <p class="wallet-desc">Connect your Phantom Wallet to access your referral dashboard</p>
+                                
+                                <div class="preview-code-section">
+                                    <span class="preview-code-label">Your code:</span>
+                                    <span class="preview-code-text" id="preview-code">12345678</span>
+                                </div>
+                                
+                                <button class="connect-wallet-btn" onclick="connectPhantomWallet()">
+                                    <span class="btn-icon">👻</span>
+                                    <span class="btn-text">[CONNECT PHANTOM WALLET]</span>
+                                    <span class="btn-arrow">→</span>
+                                </button>
+                                
+                                <div class="enter-code-section">
+                                    <h3 class="enter-code-title">[ENTER_REF_CODE.exe]</h3>
+                                    <p class="enter-code-desc">Already have a referral code? Enter it below:</p>
+                                    <div class="code-input-container">
+                                        <input type="text" id="ref-code-input" placeholder="Enter referral code..." maxlength="15">
+                                        <button class="submit-code-btn" onclick="submitReferralCode()">
+                                            [SUBMIT]
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Wallet Dashboard (показывается когда подключен) -->
+                            <div class="wallet-dashboard" id="wallet-dashboard" style="display: none;">
+                                <h2 class="dashboard-title">[REFERRAL_DASHBOARD.exe] 🚀</h2>
+                                
+                                <div class="wallet-info">
+                                    <div class="wallet-address-display">
+                                        <span class="wallet-label">Connected Wallet:</span>
+                                        <span class="wallet-address" id="connected-wallet">Not Connected</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="dashboard-stats">
+                                    <div class="dashboard-row">
+                                        <div class="stat-box">
+                                            <span class="stat-title">👥 INVITES</span>
+                                            <span class="stat-number" id="user-invites">0</span>
+                                        </div>
+                                        <div class="stat-box">
+                                            <span class="stat-title">💰 EARNINGS</span>
+                                            <span class="stat-number" id="user-earnings">$0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="user-ref-code">
+                                    <span class="ref-label">Your_ref_code:</span>
+                                    <div class="user-code-display">
+                                        <span class="user-code-text" id="user-ref-code">Loading...</span>
+                                        <button class="copy-ref-btn" onclick="copyUserReferralCode()" title="Copy Your Code">
+                                            <i class="fas fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="enter-code-section">
+                                    <h3 class="enter-code-title">[ENTER_FRIEND_CODE.exe]</h3>
+                                    <p class="enter-code-desc">Enter a friend's referral code to get bonuses:</p>
+                                    <div class="code-input-container">
+                                        <input type="text" id="friend-code-input" placeholder="Enter friend's code..." maxlength="15">
+                                        <button class="submit-code-btn" onclick="submitFriendCode()">
+                                            [LINK ACCOUNTS]
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <button class="disconnect-btn" onclick="disconnectWallet()">
+                                    [DISCONNECT WALLET]
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Calculator Section -->
+                    <section class="calculator-section">
+                        <h2 class="section-title">[INSANE PROFIT CALCULATOR] 🚀💰</h2>
+                        <div class="calculator">
+                            <div class="calc-inputs">
+                                <div class="input-group">
+                                    <label for="tokens-owned">Tokens_owned:</label>
+                                    <input type="number" id="tokens-owned" placeholder="1000000" min="0">
+                                </div>
+                                <div class="input-group">
+                                    <label for="direct-invites">Direct_invites:</label>
+                                    <input type="number" id="direct-invites" placeholder="5" min="0">
+                                </div>
+                                <div class="input-group">
+                                    <label for="indirect-invites">Indirect_invites_avg:</label>
+                                    <input type="number" id="indirect-invites" placeholder="3" min="0">
+                                </div>
+                            </div>
+                            
+                            <button class="calc-btn" onclick="calculateProfits()">
+                                [CALCULATE PROFITS]
+                            </button>
+                            
+                            <div class="calc-results" id="calc-results" style="display: none;">
+                                <div class="result-item">
+                                    <span class="result-label">Monthly_earnings:</span>
+                                    <span class="result-value" id="monthly-earnings">$0</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Round_earnings:</span>
+                                    <span class="result-value" id="round-earnings">$0</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-label">Progress to next level:</div>
+                                    <div class="progress-container">
+                                        <div class="progress-fill" id="progress-fill"></div>
+                                        <span class="progress-text" id="progress-text">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- How It Works Section -->
+                    <section class="how-it-works">
+                        <h2 class="section-title">[HOW_IT_WORKS.exe]</h2>
+                        <div class="steps">
+                            <div class="step">
+                                <span class="step-number">01.</span>
+                                <span class="step-text">Buy tokens on pump.fun</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">02.</span>
+                                <span class="step-text">Invite people using your ref link</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">03.</span>
+                                <span class="step-text">Earn % from their buys forever</span>
+                            </div>
+                            <div class="step">
+                                <span class="step-number">04.</span>
+                                <span class="step-text">Stack more, earn more, rise higher</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column - Pyramid -->
+                <div class="col-xl-3 col-lg-12 col-md-6 col-12">
+                    <div class="side-block">
+                        <h2 class="side-title">[PYRAMID STRUCTURE]</h2>
+                        <section class="pyramid-section">
+                            <div class="pyramid">
+                                <pre class="pyramid-visual">
+       [YOU]
+      /  |  \
+    A1  A2  A3
+   / |    | \
+  B1 B2  B3 B4
+ /           \
+C1           C2
+                                </pre>
+                            </div>
+                            <div class="pyramid-info">
+                                <p class="pyramid-desc">For every invite you get 15% of their buys.</p>
+                                <p class="pyramid-desc">And 5% from their invites. Forever.</p>
+                                <div class="formula">
+                                    <code>Earnings = (Tokens_owned × BaseRate) + (InviteCount × 0.1 × Tokens_owned)</code>
+                                </div>
+                                
+                                <!-- Pyramid Stats -->
+                                <div class="pyramid-stats">
+                                    <h4 class="pyramid-stats-title">[PYRAMID LEVELS]</h4>
+                                    <div class="level-row">
+                                        <span class="level-name">👑 DIAMOND (LVL 5):</span>
+                                        <span class="level-bonus">25% BONUS</span>
+                                    </div>
+                                    <div class="level-row">
+                                        <span class="level-name">💎 GOLD (LVL 4):</span>
+                                        <span class="level-bonus">20% BONUS</span>
+                                    </div>
+                                    <div class="level-row">
+                                        <span class="level-name">⚡ SILVER (LVL 3):</span>
+                                        <span class="level-bonus">15% BONUS</span>
+                                    </div>
+                                    <div class="level-row">
+                                        <span class="level-name">🔥 BRONZE (LVL 2):</span>
+                                        <span class="level-bonus">10% BONUS</span>
+                                    </div>
+                                    <div class="level-row">
+                                        <span class="level-name">🚀 STARTER (LVL 1):</span>
+                                        <span class="level-bonus">5% BONUS</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Referral Tips -->
+                                <div class="referral-tips">
+                                    <h4 class="tips-title">[PRO TIPS] 💡</h4>
+                                    <div class="tip-item">
+                                        💬 Share in crypto communities
+                                    </div>
+                                    <div class="tip-item">
+                                        📈 Show profit screenshots
+                                    </div>
+                                    <div class="tip-item">
+                                        🎯 Target active traders
+                                    </div>
+                                    <div class="tip-item">
+                                        🔥 Use FOMO marketing
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="terminal-line">
+                    <span class="prompt">ponzi@defi:~$</span>
+                    <span class="command">echo "To the moon or to the ground. No middle ground."</span>
+                </div>
+                <p class="disclaimer">💎 PONZI TOKEN © 2025 - DIAMOND HANDS FOREVER 🚀</p>
+            </footer>
+        </div>
+        
+
+    </div>
+
+    <!-- BOOTSTRAP JS + ANIMATION LIBRARIES -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- CUSTOM SCRIPTS -->
+    <script src="api-integration.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- INITIALIZE ANIMATIONS -->
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true
+        });
+        
+        // Auto refresh AOS on resize for responsive behavior
+        window.addEventListener('resize', function() {
+            AOS.refresh();
+        });
+    </script>
+</body>
+</html>
